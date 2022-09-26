@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Add book:</h4>
+<form action="/books/add" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+    <label>Author:</label>
+    <input type="text" name="author" value="aboba"/>
+    <label>Name:</label>
+    <input type="text"  name="name" value="pushilin"/>
+    <input type="submit" value="Add">
+</form>
+<h4>Remove book:</h4>
+<form action="/books/remove" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+    <label>Id:</label>
+    <input type="text" name="id" value="1"/>
+    <input type="submit" value="Remove">
+</form>
+<form action="/books/reset" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+    <input type="submit" value="Reset">
+</form>
+<h4>Books:</h4>
+<table>
+    <tr>
+        <th>id</th>
+        <th>author</th>
+        <th>name</th>
+    </tr>
+    {{range .}}
+    <tr>
+        <th>{{.Id}}</th>
+        <th>{{.Author}}</th>
+        <th>{{.Name}}</th>
+    </tr>
+    {{end}}
+</table>
+
+
+</body>
+</html>
