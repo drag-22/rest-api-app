@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	Books.Add("книгер", "mama")
+	Books.Add("книга", "mama")
 	Books.Add("книгерwefwef", "mawefwefma")
 	Books.Add("кнfwefwefwfdигер", "mamwefwefwea")
 
